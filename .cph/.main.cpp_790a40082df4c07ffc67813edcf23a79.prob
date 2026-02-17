@@ -1,1 +1,0 @@
-{"name":"Local: main","url":"c:\\Users\\ishiv\\Desktop\\az_codes\\main.cpp","tests":[{"id":1770744445852,"input":"3\n3\n1 3 4\n5 3 1\n2\n1 1\n1 1\n2\n2 2\n3 3","output":"Alice\nTie\nBob"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\ishiv\\Desktop\\az_codes\\main.cpp","group":"local","local":true}
