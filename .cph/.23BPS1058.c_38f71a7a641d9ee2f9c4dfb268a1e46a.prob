@@ -1,0 +1,1 @@
+{"name":"Local: 23BPS1058","url":"c:\\Users\\ishiv\\Desktop\\az_codes\\23BPS1058.c","tests":[{"id":1770744281151,"input":"3\n5 1 2\n","output":"8"},{"id":1770744410638,"input":"5\n31 41 59 26 53\n","output":"176\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\ishiv\\Desktop\\az_codes\\23BPS1058.c","group":"local","local":true}
