@@ -1,0 +1,48 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n, k;
+    cin >> n >> k;
+    int arr[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    // head and tail
+    int tail = 0, head = -1;
+
+    // datastructure for the window
+	int cntzero = 0;
+	
+    // answer maintain
+    int ans = 0;
+
+    while (tail < n)
+    {   //eat til you can
+        while (head  + 1 < n &&//if we can eat it*/)
+        {
+            head++;
+            //write how ds changes
+        }
+       
+        
+        // update the answer for current start // length = head - tail + 1, longest do max, min for shortest, ans += head - tail + 1 for count
+        ans = 
+        
+        // tail++
+        if (tail <= head)   
+        {
+            //how ds change by removing tail statement
+            tail++;
+        }
+        else // keep it same for all question, it basically help to handle empty subarray
+        {
+            tail++;
+            head = tail - 1;
+        }
+    }
+
+    cout << ans << endl;
+}

@@ -1,0 +1,63 @@
+#include <bits/stdc++.h>
+#define endl '\n'
+#define int long long 
+using namespace std;
+
+int freq_arr[1000100];
+int distinct_count = 0;
+
+void insert(int x){
+    if(!freq_arr[x]++){
+        distinct_count++;
+    }
+}
+
+void remove_(int x){
+    if(!--freq_arr[x]){
+        distinct_count--;
+    }
+}
+
+signed main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+
+    int n,k;
+    cin>>n>>k;
+
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+
+    int head = -1, tail = 0;
+    int ans = 0;
+
+    int currSum = 0;      // sum of window
+    int windowSum = 0;    // sum of all subarrays ending in window
+
+    while(tail<n){
+        while(head+1<n && (freq_arr[arr[head+1]]>0 || distinct_count<k)){
+            head++;
+            insert(arr[head]);
+
+            currSum += arr[head];
+            windowSum += currSum;
+        }
+
+        ans += windowSum;
+
+        if(tail<=head){
+            windowSum -= currSum;   // remove contribution of this tail
+            currSum -= arr[tail];
+            remove_(arr[tail]);
+            tail++;
+        }else{
+            tail++;
+            head = tail-1;
+        }
+    }
+
+    cout<<ans<<endl;
+    return 0;
+}
